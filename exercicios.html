@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <h1>Exercícios</h1>
+
+    <!-- Exercício 01 -->
+    <section>
+        <h2>Exercício 01 - Comparar Dois Números</h2>
+
+        <div class="form-group">
+            <label for="numero1">Número 1</label>
+            <input type="number" id="numero1">
+        </div>
+
+        <div class="form-group">
+            <label for="numero2">Número 2</label>
+            <input type="number" id="numero2">
+        </div>
+
+        <button onclick="exercicio01CompararDoisNumeros()">Executar</button>
+    </section>
+
+    <!-- Exercício 02 -->
+    <section>
+        <h2>Exercício 02 - Classificar Idade</h2>
+
+        <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" placeholder="Digite o nome">
+        </div>
+
+        <div class="form-group">
+            <label for="idade">Idade</label>
+            <input type="number" id="idade" placeholder="Digite a idade">
+        </div>
+
+        <button onclick="exercicio02ClassificarIdade()">Classificar</button>
+    </section>
+
+    <!-- Exercício 03 -->
+    <section>
+        <h2>Exercício 03 - Calcular Média Escolar</h2>
+
+        <div class="form-group">
+            <label for="nota1">Nota 1</label>
+            <input type="number" id="nota1" placeholder="0 a 10" min="0" max="10">
+        </div>
+
+        <div class="form-group">
+            <label for="nota2">Nota 2</label>
+            <input type="number" id="nota2" placeholder="0 a 10" min="0" max="10">
+        </div>
+
+        <div class="form-group">
+            <label for="nota3">Nota 3</label>
+            <input type="number" id="nota3" placeholder="0 a 10" min="0" max="10">
+        </div>
+
+        <button onclick="exercicio03CalcularMediaEscolar()">Calcular</button>
+
+        <div class="form-group">
+            <label for="resultado-media">Resultado</label>
+            <textarea id="resultado-media" disabled readonly></textarea>
+        </div>
+    </section>
+    <section>
+    <h2>Exercício 04 - Calcular Desconto de Produto</h2>
+
+    <div class="form-group">
+        <label for="nome-produto">Nome do Produto</label>
+        <input type="text" id="nome-produto" placeholder="Digite o nome do produto">
+    </div>
+
+    <div class="form-group">
+        <label for="preco-produto">Preço (R$)</label>
+        <input type="number" id="preco-produto" placeholder="Digite o preço" min="0">
+    </div>
+
+    <div class="form-group">
+        <label for="desconto">Desconto</label>
+        <select id="desconto">
+            <option selected disabled>Selecione o desconto</option>
+            <option value="5">5%</option>
+            <option value="10">10%</option>
+            <option value="15">15%</option>
+            <option value="20">20%</option>
+            <option value="25">25%</option>
+            <option value="50">50%</option>
+        </select>
+    </div>
+
+    <button onclick="exercicio04CalcularDescontoProduto()">Calcular</button>
+
+    <div class="form-group">
+        <label for="resultado-desconto">Resultado</label>
+        <textarea id="resultado-desconto" disabled readonly></textarea>
+    </div>
+</section>
+
+<section>
+    <h2>Exercício 05 - Simular Salário</h2>
+
+    <div class="form-group">
+        <label for="nome-funcionario">Nome do Funcionário</label>
+        <input type="text" id="nome-funcionario" placeholder="Digite o nome">
+    </div>
+
+    <div class="form-group">
+        <label for="salario-atual">Salário Atual (R$)</label>
+        <input type="number" id="salario-atual" placeholder="Digite o salário" min="0">
+    </div>
+
+    <div class="form-group">
+        <label for="cargo">Cargo</label>
+        <select id="cargo">
+            <option selected disabled>Selecione o cargo</option>
+            <option value="Assistente">Assistente</option>
+            <option value="Analista">Analista</option>
+            <option value="Coordenador">Coordenador</option>
+            <option value="Gerente">Gerente</option>
+        </select>
+    </div>
+
+    <button onclick="exercicio05SimularSalario()">Calcular</button>
+
+    <div class="form-group">
+        <label for="resultado-salario">Resultado</label>
+        <textarea id="resultado-salario" disabled readonly></textarea>
+    </div>
+</section>
+
+<section>
+    <h2>Exercício 06 - Calcular Conta do Restaurante</h2>
+
+    <div class="form-group">
+        <label for="nome-cliente">Nome do Cliente</label>
+        <input type="text" id="nome-cliente" placeholder="Digite o nome">
+    </div>
+
+    <div class="form-group">
+        <label for="valor-consumido">Valor Consumido (R$)</label>
+        <input type="number" id="valor-consumido" placeholder="Digite o valor" min="0">
+    </div>
+
+    <div class="form-group checkbox-option">
+        <input type="checkbox" id="taxa-servico">
+        <label for="taxa-servico">Incluir taxa de serviço (10%)</label>
+    </div>
+
+    <button onclick="exercicio06CalcularContaRestaurante()">Calcular</button>
+
+    <div class="form-group">
+        <label for="resultado-restaurante">Resultado</label>
+        <textarea id="resultado-restaurante" disabled readonly></textarea>
+    </div>
+</section>
+<section>
+    <h2>Exercício 07 - Cadastrar Aluno</h2>
+
+    <div class="form-group">
+        <label for="nome-aluno">Nome do Aluno</label>
+        <input type="text" id="nome-aluno" placeholder="Digite o nome">
+    </div>
+
+    <div class="form-group">
+        <span>Turno</span>
+        <div class="radio-group">
+            <div class="radio-option">
+                <input type="radio" id="turno-matutino" name="turno" value="Matutino">
+                <label for="turno-matutino">Matutino</label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="turno-vespertino" name="turno" value="Vespertino">
+                <label for="turno-vespertino">Vespertino</label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="turno-noturno" name="turno" value="Noturno">
+                <label for="turno-noturno">Noturno</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="curso">Curso</label>
+        <select id="curso">
+            <option selected disabled>Selecione um curso</option>
+            <option value="Desenvolvimento de Sistemas">Desenvolvimento de Sistemas</option>
+            <option value="Administração">Administração</option>
+            <option value="Design Gráfico">Design Gráfico</option>
+            <option value="Marketing">Marketing</option>
+        </select>
+    </div>
+
+    <button onclick="exercicio07CadastrarAlunoTurnoCurso()">Cadastrar</button>
+
+    <div class="form-group">
+        <label for="resultado-aluno">Resultado</label>
+        <textarea id="resultado-aluno" disabled readonly></textarea>
+    </div>
+</section>
+<section>
+    <h2>Exercício 08 - Simular Locação de Carro</h2>
+
+    <div class="form-group">
+        <label for="nome-locatario">Nome do Cliente</label>
+        <input type="text" id="nome-locatario" placeholder="Digite o nome">
+    </div>
+
+    <div class="form-group">
+        <label for="tipo-carro">Tipo de Carro</label>
+        <select id="tipo-carro">
+            <option selected disabled>Selecione o tipo de carro</option>
+            <option value="Econômico">Econômico</option>
+            <option value="Intermediário">Intermediário</option>
+            <option value="SUV">SUV</option>
+            <option value="Luxo">Luxo</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="quantidade-dias">Quantidade de Dias</label>
+        <input type="number" id="quantidade-dias" placeholder="Digite a quantidade de dias" min="1">
+    </div>
+
+    <div class="form-group checkbox-option">
+        <input type="checkbox" id="seguro">
+        <label for="seguro">Seguro (R$ 30,00 por dia)</label>
+    </div>
+
+    <div class="form-group checkbox-option">
+        <input type="checkbox" id="cadeira-infantil">
+        <label for="cadeira-infantil">Cadeira Infantil (R$ 15,00 por dia)</label>
+    </div>
+
+    <button onclick="exercicio08SimularLocacaoCarro()">Calcular</button>
+
+    <div class="form-group">
+        <label for="resultado-locacao">Resultado</label>
+        <textarea id="resultado-locacao" disabled readonly></textarea>
+    </div>
+</section>
+
+<section>
+    <h2>Exercício 09 - Simular Plano de Internet</h2>
+
+    <div class="form-group">
+        <label for="nome-internet">Nome do Cliente</label>
+        <input type="text" id="nome-internet" placeholder="Digite o nome">
+    </div>
+
+    <div class="form-group">
+        <span>Plano</span>
+        <div class="radio-group">
+            <div class="radio-option">
+                <input type="radio" id="plano-basico" name="plano-internet" value="Básico">
+                <label for="plano-basico">Básico - 100 Mbps - R$ 79,90/mês</label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="plano-intermediario" name="plano-internet" value="Intermediário">
+                <label for="plano-intermediario">Intermediário - 300 Mbps - R$ 119,90/mês</label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="plano-avancado" name="plano-internet" value="Avançado">
+                <label for="plano-avancado">Avançado - 500 Mbps - R$ 159,90/mês</label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="plano-fibra" name="plano-internet" value="Fibra Total">
+                <label for="plano-fibra">Fibra Total - 1 Gbps - R$ 219,90/mês</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group checkbox-option">
+        <input type="checkbox" id="instalacao-imediata">
+        <label for="instalacao-imediata">Instalação Imediata (R$ 50,00)</label>
+    </div>
+
+    <div class="form-group checkbox-option">
+        <input type="checkbox" id="roteador-adicional">
+        <label for="roteador-adicional">Roteador Adicional (R$ 35,00)</label>
+    </div>
+
+    <button onclick="exercicio09SimularPlanoInternet()">Simular</button>
+
+    <div class="form-group">
+        <label for="resultado-internet">Resultado</label>
+        <textarea id="resultado-internet" disabled readonly></textarea>
+    </div>
+</section>
+<section>
+    <h2>Exercício 10 - Gerar Orçamento de Evento</h2>
+
+    <div class="form-group">
+        <label for="nome-responsavel">Nome do Responsável</label>
+        <input type="text" id="nome-responsavel" placeholder="Digite o nome">
+    </div>
+
+    <div class="form-group">
+        <label for="quantidade-convidados">Quantidade de Convidados</label>
+        <input type="number" id="quantidade-convidados" placeholder="Digite a quantidade" min="1">
+    </div>
+
+    <div class="form-group">
+        <label for="tipo-evento">Tipo de Evento</label>
+        <select id="tipo-evento">
+            <option selected disabled>Selecione o tipo de evento</option>
+            <option value="Casamento">Casamento</option>
+            <option value="Aniversário">Aniversário</option>
+            <option value="Formatura">Formatura</option>
+            <option value="Corporativo">Corporativo</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <span>Pacote</span>
+        <div class="radio-group">
+            <div class="radio-option">
+                <input type="radio" id="pacote-basico" name="pacote" value="Básico">
+                <label for="pacote-basico">Básico</label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="pacote-standard" name="pacote" value="Standard">
+                <label for="pacote-standard">Standard</label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="pacote-premium" name="pacote" value="Premium">
+                <label for="pacote-premium">Premium</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="data-evento">Data do Evento</label>
+        <input type="date" id="data-evento">
+    </div>
+
+    <div class="form-group checkbox-option">
+        <input type="checkbox" id="decoracao-especial">
+        <label for="decoracao-especial">Decoração Especial (R$ 800,00)</label>
+    </div>
+
+    <div class="form-group checkbox-option">
+        <input type="checkbox" id="fotografia">
+        <label for="fotografia">Fotografia (R$ 1.200,00)</label>
+    </div>
+
+    <div class="form-group checkbox-option">
+        <input type="checkbox" id="musica">
+        <label for="musica">Música (R$ 600,00)</label>
+    </div>
+
+    <button onclick="exercicio10GerarOrcamentoEvento()">Gerar Orçamento</button>
+
+    <div class="form-group">
+        <label for="resultado-evento">Resultado</label>
+        <textarea id="resultado-evento" disabled readonly></textarea>
+    </div>
+</section>
+
+
+
+    <script src="assets/js/exercicio01.js"></script>
+    <script src="assets/js/exercicio02.js"></script>
+    <script src="assets/js/exercicio03.js"></script>
+    <script src="assets/js/exercicio04.js"></script>
+    <script src="assets/js/exercicio05.js"></script>
+    <script src="assets/js/exercicio06.js"></script>
+    <script src="assets/js/exercicio07.js"></script>
+    <script src="assets/js/exercicio08.js"></script>
+    <script src="assets/js/exercicio09.js"></script>
+    <script src="assets/js/exercicio010.js"></script>
+</body>
+</html>

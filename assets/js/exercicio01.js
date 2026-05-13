@@ -1,4 +1,3 @@
-
 function exercicio01CompararDoisNumeros() {
     const campoNumero1 = document.getElementById("numero1");
     const campoNumero2 = document.getElementById("numero2");

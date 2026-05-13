@@ -13,11 +13,51 @@
 
             <label for="numero2">Número2</label>
             <input type="number" id="numero2">
-            <button onclick="executarFunçao()">Executar</button>
+            <button onclick="exercicio01CompararDoisNumeros()">Executar</button>
         </div>
 
 
+<section>
+    <h2>Exercício 02 - Classificar Idade</h2>
 
+    <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" placeholder="Digite o nome">
+    </div>
+<br>
+    <div class="form-group">
+        <label for="idade">Idade</label>
+        <input type="number" id="idade" placeholder="Digite a idade">
+    </div>
+<br>
+    <button onclick="exercicio02ClassificarIdade()">Classificar</button>
+</section>
+
+<section>
+    <h2>Exercício 03 - Calcular Média Escolar</h2>
+
+    <div class="form-group">
+        <label for="nota1">Nota 1</label>
+        <input type="number" id="nota1" placeholder="0 a 10" min="0" max="10">
+    </div>
+
+    <div class="form-group">
+        <label for="nota2">Nota 2</label>
+        <input type="number" id="nota2" placeholder="0 a 10" min="0" max="10">
+    </div>
+
+    <div class="form-group">
+        <label for="nota3">Nota 3</label>
+        <input type="number" id="nota3" placeholder="0 a 10" min="0" max="10">
+    </div>
+
+    <button onclick="exercicio03CalcularMediaEscolar()">Calcular</button>
+
+    <div class="form-group">
+        <label for="resultado-media">Resultado</label>
+        <textarea id="resultado-media" disabled readonly></textarea>
+    </div>
+</section>
 
 
 
@@ -27,5 +67,7 @@
 
 
      <script src="assets/js/exercicio-01-seletores.js"></script>
+     <script src="assets/js/exercicio02.js"></script>
+     <script src="assets/js/exercicio03.js"></script>
 </body>
 </html>
