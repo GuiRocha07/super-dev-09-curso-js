@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destaque de Produto</title>
+
+    <link rel="stylesheet" href="assets/css/destaque-produto.css" />
+</head>
+
+<body>
+    <h1>Página de Destaque de Produto</h1>
+
+    <div id="produto" class="caixa-produto">
+        <p id="nome-produto">Notebook Gamer</p>
+    </div>
+
+    <button onclick="definirCorVermelha()">Cor Vermelha</button>
+    <button onclick="definirCorAzul()">Cor Azul</button>
+    <button onclick="definirCorVerde()">Cor Verde</button>
+    <button onclick="aumentarCaixa()">Aumentar Caixa</button>
+    <button onclick="redefinirCaixa()">Redefinir</button>
+
+
+    <h1>perfil de usuário</h1>
+
+    <div class="form-group">
+        <label for="nome-cliente">Nome</label>
+        <input type="text" id="nome-cliente" placeholder="Digite o nome">
+    </div>
+ <div class="form-group">
+        <label for="tema">Tema</label>
+        <select id="tema">
+            <option selected disabled>Selecione um tema</option>
+            <option value="fundo escuro">Azul</option>
+            <option value="fundo claro"> Azul claro </option>
+            <option value="fundo verde"> Verde </option>
+        </select>
+    </div>
+  
+    <input type="checkbox" id="modoDestaque">
+    Ativar modo destaque
+</label>
+
+
+
+
+
+
+     
+
+    <script src="assets/js/destaque-produto01.js"></script>
+</body>
+
+</html>
