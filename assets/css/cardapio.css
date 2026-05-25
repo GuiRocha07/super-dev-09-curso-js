@@ -1,0 +1,498 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    padding: 30px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 24px;
+}
+
+/* Formulário */
+.formulario {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #444;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #2563eb;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Área do cardápio */
+.area-cardapio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    max-width: 900px;
+}
+
+/* Card base de cada prato */
+.card-prato {
+    background: white;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    width: 220px;
+    border-left: 6px solid #ccc;
+}
+
+.card-prato h3 {
+    margin-bottom: 8px;
+    color: #111827;
+    font-size: 1.1rem;
+}
+
+/* Preço em destaque */
+.card-preco {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Tag de categoria */
+.card-categoria {
+    font-size: 0.82rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+/* Categoria: lanche */
+.card-lanche {
+    border-left-color: #f97316;
+}
+
+.card-lanche .card-preco {
+    color: #f97316;
+}
+
+.card-lanche .card-categoria {
+    background: #fff7ed;
+    color: #f97316;
+}
+
+/* Categoria: bebida */
+.card-bebida {
+    border-left-color: #2563eb;
+}
+
+.card-bebida .card-preco {
+    color: #2563eb;
+}
+
+.card-bebida .card-categoria {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+/* Categoria: sobremesa */
+.card-sobremesa {
+    border-left-color: #ec4899;
+}
+
+.card-sobremesa .card-preco {
+    color: #ec4899;
+}
+
+.card-sobremesa .card-categoria {
+    background: #fdf2f8;
+    color: #ec4899;
+}
+
+
+/* ===== MURAL DE RECADOS ===== */
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    resize: vertical;
+    min-height: 100px;
+    font-family: Arial, sans-serif;
+}
+
+textarea:focus {
+    border-color: #2563eb;
+}
+
+/* Área do mural */
+.area-mural {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 500px;
+    margin-top: 10px;
+}
+
+/* Card de cada recado */
+.card-recado {
+    background: white;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    border-left: 6px solid #2563eb;
+}
+
+/* Nome da pessoa em destaque */
+.recado-nome {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #2563eb;
+    margin-bottom: 8px;
+}
+
+/* Texto do recado */
+.recado-texto {
+    color: #333;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Horário do recado */
+.recado-horario {
+    font-size: 0.78rem;
+    color: #999;
+}
+
+/* ===== BIBLIOTECA ===== */
+
+.area-biblioteca {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    max-width: 900px;
+    margin-top: 10px;
+}
+
+/* Card base do livro */
+.card-livro {
+    background: white;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    width: 220px;
+    border-left: 6px solid #ccc;
+}
+
+.card-livro h3 {
+    font-size: 1rem;
+    color: #111827;
+    margin-bottom: 6px;
+}
+
+.livro-autor {
+    font-size: 0.88rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Tag de status */
+.livro-status {
+    font-size: 0.82rem;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+/* Botão de alterar status */
+.btn-status {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+/* Livro disponível */
+.card-disponivel {
+    border-left-color: #22c55e;
+}
+
+.card-disponivel .livro-status {
+    background: #f0fdf4;
+    color: #22c55e;
+}
+
+.card-disponivel .btn-status {
+    background: #22c55e;
+    color: white;
+}
+
+.card-disponivel .btn-status:hover {
+    background: #16a34a;
+}
+
+/* Livro emprestado */
+.card-emprestado {
+    border-left-color: #ef4444;
+}
+
+.card-emprestado .livro-status {
+    background: #fef2f2;
+    color: #ef4444;
+}
+
+.card-emprestado .btn-status {
+    background: #ef4444;
+    color: white;
+}
+
+.card-emprestado .btn-status:hover {
+    background: #dc2626;
+}
+
+
+
+/* ===== PIZZARIA ===== */
+
+.area-pedidos {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 500px;
+    margin-top: 10px;
+}
+
+/* Card base do pedido */
+.card-pedido {
+    background: white;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    border-left: 6px solid #f97316;
+}
+
+.card-pedido h3 {
+    font-size: 1rem;
+    color: #111827;
+    margin-bottom: 6px;
+}
+
+.pedido-sabor {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 4px;
+}
+
+.pedido-quantidade {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 4px;
+}
+
+.pedido-horario {
+    font-size: 0.78rem;
+    color: #999;
+    margin-bottom: 12px;
+}
+
+/* Pedido grande (quantidade > 3) */
+.pedido-grande {
+    border-left-color: #dc2626;
+    background: #fff7f7;
+}
+
+.pedido-grande h3::after {
+    content: " 🔥 Pedido Grande";
+    font-size: 0.75rem;
+    color: #dc2626;
+    font-weight: normal;
+}
+
+/* Botão entregar */
+.btn-entregar {
+    width: 100%;
+    padding: 8px;
+    background: #f97316;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-entregar:hover {
+    background: #ea6c00;
+}
+
+/* Pedido entregue */
+.card-entregue {
+    border-left-color: #22c55e;
+    background: #f0fdf4;
+    opacity: 0.75;
+}
+
+.card-entregue h3 {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.card-entregue .pedido-sabor,
+.card-entregue .pedido-quantidade {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.card-entregue .btn-entregar {
+    background: #22c55e;
+    cursor: default;
+}
+
+
+/* ===== RANKING ===== */
+
+.area-ranking {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 500px;
+    margin-top: 10px;
+}
+
+/* Card base do jogador */
+.card-jogador {
+    background: white;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    border-left: 6px solid #6366f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.jogador-nome {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #111827;
+}
+
+.jogador-posicao {
+    font-size: 0.82rem;
+    color: #999;
+    margin-top: 2px;
+}
+
+.jogador-pontuacao {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #6366f1;
+}
+
+/* Primeiro lugar */
+.card-primeiro {
+    border-left-color: #f59e0b;
+    background: #fffbeb;
+}
+
+.card-primeiro .jogador-pontuacao {
+    color: #f59e0b;
+}
+
+/* Pontuação alta (acima de 1000) */
+.card-pontuacao-alta {
+    border-left-color: #8b5cf6;
+    background: #faf5ff;
+}
+
+.card-pontuacao-alta .jogador-pontuacao {
+    color: #8b5cf6;
+}
+
+/* Área do maior pontuador */
+.area-maior-pontuador {
+    background: linear-gradient(135deg, #f59e0b, #fbbf24);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 500px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(245,158,11,0.3);
+}
+
+.area-maior-pontuador p {
+    color: white;
+    font-size: 0.95rem;
+}
+
+.maior-titulo {
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.85;
+    margin-bottom: 6px;
+}
+
+.maior-nome {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.maior-pontuacao {
+    font-size: 1rem;
+    opacity: 0.9;
+}

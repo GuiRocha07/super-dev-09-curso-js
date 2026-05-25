@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Digital</title>
+    <link rel="stylesheet" href="assets/css/cardapio.css">
+</head>
+<body>
+
+    <h1> Cardápio Digital</h1>
+
+    <!-- Formulário -->
+    <div class="formulario">
+
+        <div class="form-group">
+            <label for="nome-prato">Nome do Prato</label>
+            <input type="text" id="nome-prato" placeholder="Ex: X-Burguer">
+        </div>
+
+        <div class="form-group">
+            <label for="preco-prato">Preço (R$)</label>
+            <input type="number" id="preco-prato" placeholder="Ex: 25.90" min="0">
+        </div>
+
+        <div class="form-group">
+            <label for="categoria">Categoria</label>
+            <select id="categoria">
+                <option value="" selected disabled>Selecione a categoria</option>
+                <option value="lanche"> Lanche</option>
+                <option value="bebida"> Bebida</option>
+                <option value="sobremesa"> Sobremesa</option>
+            </select>
+        </div>
+
+        <button onclick="adicionarPrato()">Adicionar ao Cardápio</button>
+
+    </div>
+
+    <!-- Área dos cards -->
+    <div class="area-cardapio"></div>
+
+
+    <!-- ===== ATIVIDADE 2 - Mural de Recados ===== -->
+<h1> Mural de Recados</h1>
+
+<div class="formulario">
+
+    <div class="form-group">
+        <label for="nome-pessoa">Seu Nome</label>
+        <input type="text" id="nome-pessoa" placeholder="Ex: João Silva">
+    </div>
+
+    <div class="form-group">
+        <label for="texto-recado">Recado</label>
+        <textarea id="texto-recado" placeholder="Digite seu recado aqui..."></textarea>
+    </div>
+
+    <button onclick="publicarRecado()">Publicar Recado</button>
+
+</div>
+
+<!-- Área onde os recados aparecem -->
+<div class="area-mural"></div>
+
+
+<!-- ===== ATIVIDADE 3 - Biblioteca ===== -->
+<h1> Controle de Biblioteca</h1>
+
+<div class="formulario">
+
+    <div class="form-group">
+        <label for="nome-livro">Nome do Livro</label>
+        <input type="text" id="nome-livro" placeholder="Ex: Dom Casmurro">
+    </div>
+
+    <div class="form-group">
+        <label for="autor-livro">Autor</label>
+        <input type="text" id="autor-livro" placeholder="Ex: Machado de Assis">
+    </div>
+
+    <div class="form-group">
+        <label for="status-livro">Status</label>
+        <select id="status-livro">
+            <option value="" selected disabled>Selecione o status</option>
+            <option value="disponivel"> Disponível</option>
+            <option value="emprestado"> Emprestado</option>
+        </select>
+    </div>
+
+    <button onclick="cadastrarLivro()">Cadastrar Livro</button>
+
+</div>
+
+<!-- Área onde os livros aparecem -->
+<div class="area-biblioteca"></div>
+
+
+
+
+<!-- ===== ATIVIDADE 4 - Pizzaria ===== -->
+<h1> Pedidos da Pizzaria</h1>
+
+<div class="formulario">
+
+    <div class="form-group">
+        <label for="nome-cliente-pizza">Nome do Cliente</label>
+        <input type="text" id="nome-cliente-pizza" placeholder="Ex: Maria Silva">
+    </div>
+
+    <div class="form-group">
+        <label for="sabor-pizza">Sabor da Pizza</label>
+        <select id="sabor-pizza">
+            <option value="" selected disabled>Selecione o sabor</option>
+            <option value="Margherita"> Margherita</option>
+            <option value="Calabresa"> Calabresa</option>
+            <option value="Frango com Catupiry"> Frango com Catupiry</option>
+            <option value="Portuguesa"> Portuguesa</option>
+            <option value="Chocolate"> Chocolate</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="quantidade-pizza">Quantidade</label>
+        <input type="number" id="quantidade-pizza" placeholder="Ex: 2" min="1">
+    </div>
+
+    <button onclick="adicionarPedido()">Adicionar Pedido</button>
+
+</div>
+
+<!-- Área onde os pedidos aparecem -->
+<div class="area-pedidos"></div>
+
+
+
+<!-- ===== ATIVIDADE 5 - Ranking ===== -->
+<h1>     Ranking de Jogadores</h1>
+
+<!-- Maior pontuador -->
+<div class="area-maior-pontuador" id="area-maior-pontuador">
+    <p>Nenhum jogador cadastrado ainda.</p>
+</div>
+
+<div class="formulario">
+
+    <div class="form-group">
+        <label for="nome-jogador">Nome do Jogador</label>
+        <input type="text" id="nome-jogador" placeholder="Ex: Player1">
+    </div>
+
+    <div class="form-group">
+        <label for="pontuacao-jogador">Pontuação</label>
+        <input type="number" id="pontuacao-jogador" placeholder="Ex: 1500" min="0">
+    </div>
+
+    <button onclick="adicionarJogador()">Adicionar ao Ranking</button>
+
+</div>
+
+<!-- Área do ranking -->
+<div class="area-ranking"></div>
+
+    <script src="assets/js/cardapio.js"></script>
+</body>
+</html>
