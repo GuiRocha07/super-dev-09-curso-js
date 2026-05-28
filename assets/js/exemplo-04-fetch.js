@@ -4,7 +4,7 @@ function cadastrarEmpresa(){
     const dados = {
         nome: "GuilhermeRocha$ LTDA",
         cnpj: "19.783.660/0001-14"
-    }
+    } 
      //Fetch é a função que permite fazer a requisição do front para o back
     fetch(url,{
         method: "POST", // Serve para cadastrar 
@@ -32,7 +32,7 @@ function listarEmpresas(){
 
     // Limpar o textoarea
     textarea.value = "";
-
+  // fetch API js
     fetch(url)
     .then(response => response.json())
     .then(empresas => {
