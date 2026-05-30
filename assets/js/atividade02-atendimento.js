@@ -28,14 +28,17 @@ function cadastrarAtendimento() {
     const tipoAtendimento = prompt("Digite o tipo de atendimento:");
     const descricao       = prompt("Digite a descrição:");
     const atendente       = prompt("Digite o atendente:");
-    const duracaoMinutos  = parseFloat(prompt("Digite a duração em minutos:"));
+    const duracaoMinutos  = parseInt(prompt("Digite a duração em minutos:"));
 
+    // POST usa dto
     const dados = {
-        cliente:         cliente,
-        tipoAtendimento: tipoAtendimento,
-        descricao:       descricao,
-        atendente:       atendente,
-        duracaoMinutos:  duracaoMinutos
+        dto: {
+            cliente:         cliente,
+            tipoAtendimento: tipoAtendimento,
+            descricao:       descricao,
+            atendente:       atendente,
+            duracaoMinutos:  duracaoMinutos
+        }
     };
 
     fetch(url, {
@@ -95,19 +98,19 @@ function editarAtendimento() {
     const tipoAtendimento = prompt("Digite o novo tipo de atendimento:");
     const descricao       = prompt("Digite a nova descrição:");
     const atendente       = prompt("Digite o novo atendente:");
-    const duracaoMinutos = parseInt(prompt("Digite a duração em minutos:"));
+    const duracaoMinutos  = parseInt(prompt("Digite a nova duração em minutos:"));
 
     const url = "https://api.franciscosensaulas.com/api/v1/trabalho/atendimentos/" + id;
 
-   const dados = {
-    dto: {
+    // PUT sem dto
+    const dados = {
         cliente:         cliente,
         tipoAtendimento: tipoAtendimento,
         descricao:       descricao,
         atendente:       atendente,
         duracaoMinutos:  duracaoMinutos
-    }
-};
+    };
+
     fetch(url, {
         method: "PUT",
         headers: {
